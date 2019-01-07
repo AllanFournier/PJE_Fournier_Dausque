@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="100">
+
+        <TextView
+            android:id="@+id/titre_note_frag"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="8dp"
+            android:layout_weight="10"
+            android:text="Canada"
+            android:textColor="#000"
+            android:textSize="36sp" />
+
+        <TextView
+            android:id="@+id/desc_note_frag"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="8dp"
+            android:layout_weight="70"
+            android:text="@string/desc_lorem_detail"
+            android:textColor="#000"
+            android:textSize="18sp" />
+        <TextView
+            android:id="@+id/adress_note_frag"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="8dp"
+            android:layout_weight="10"
+            android:text="@string/desc_lorem_detail"
+            android:textColor="#000"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tag_note_frag"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="8dp"
+            android:layout_weight="10"
+            android:text="@string/desc_lorem_detail"
+            android:textColor="#000"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

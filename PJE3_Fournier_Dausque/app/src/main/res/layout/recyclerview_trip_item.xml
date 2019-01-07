@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rela"
+    android:layout_width="fill_parent"
+    android:layout_height="100dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:contentDescription="Image du voyage"
+            android:scaleType="centerCrop"
+            android:src="@drawable/switzerland" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="100"
+            android:padding="4dp">
+
+            <TextView
+                android:id="@+id/titre"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="40"
+                android:gravity="center_vertical"
+                android:text="Titre du voyage"
+                android:textSize="26sp" />
+
+            <TextView
+                android:id="@+id/desc"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="60"
+                android:ellipsize="end"
+                android:maxLines="3"
+                android:text="Description"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

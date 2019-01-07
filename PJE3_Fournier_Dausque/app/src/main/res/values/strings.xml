@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">MyGoodTrip</string>
+    <string name="create_voyage_button_text">Create Voyage</string>
+    <string name="start_trip_button_text">Start Trip</string>
+    <string name="hint_trip">Your trip name </string>
+    <string name="hint_description">Description of your trip</string>
+    <string name="button_save">Save</string>
+    <string name="empty_not_saved">Trip not saved because it is empty.</string>
+    <string name="add_position_text">Add position</string>
+    <string name="save_text">Save</string>
+    <string name="description_text">Description</string>
+    <string name="title_item_list">Items</string>
+    <string name="title_item_detail">Item Detail</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="note_title">Note title</string>
+    <string name="desc_lorem_detail">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer libero erat, cursus at vehicula in, malesuada convallis lectus. Nulla pellentesque, magna eu mollis dapibus, enim erat maximus mauris, vitae commodo augue mauris vitae ipsum.</string>
+    <string name="title_activity_maps">Map</string>
+
+</resources>
