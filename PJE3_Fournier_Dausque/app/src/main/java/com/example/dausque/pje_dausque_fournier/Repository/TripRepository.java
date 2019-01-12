@@ -26,7 +26,6 @@ TripRepository {
         return mAllTrips;
     }
 
-
     public void insert (Trip trip) {
         new insertAsyncTask(mTripDao).execute(trip);
     }

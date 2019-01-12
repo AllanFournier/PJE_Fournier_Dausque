@@ -3,9 +3,6 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@android:color/white"
-    android:paddingTop="10dp"
-    android:paddingBottom="10dp"
-    android:paddingStart="10dp"
     >
 
     <ImageView
@@ -32,7 +29,7 @@
             android:id="@+id/textViewRecordingname"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="18sp"
+            android:textSize="24sp"
             android:text="Voice 001"
             android:textColor="@android:color/holo_red_light"
             android:textStyle="bold"
@@ -47,7 +44,7 @@
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="0.5dp"
+            android:layout_height="1dp"
             android:background="@android:color/darker_gray"
             android:layout_marginTop="15dp"
             android:layout_marginEnd="20dp"

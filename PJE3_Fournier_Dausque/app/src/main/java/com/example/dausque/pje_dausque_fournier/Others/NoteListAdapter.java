@@ -11,6 +11,7 @@ import android.widget.TextView;
 import com.example.dausque.pje_dausque_fournier.Activity.FragDetailActivity;
 import com.example.dausque.pje_dausque_fournier.Activity.FragmentDetail;
 import com.example.dausque.pje_dausque_fournier.Activity.NoteFragDetailActivity;
+import com.example.dausque.pje_dausque_fournier.Activity.NoteFragmentDetail;
 import com.example.dausque.pje_dausque_fournier.Activity.ViewNotesActivity;
 import com.example.dausque.pje_dausque_fournier.Entity.Note;
 import com.example.dausque.pje_dausque_fournier.Entity.Trip;
@@ -71,8 +72,8 @@ public class NoteListAdapter extends RecyclerView.Adapter<NoteListAdapter.NoteVi
             Note current = mNotes.get(position);
             holder.noteTitreView.setText(current.getTitNote());
             holder.noteDescView.setText(current.getContNote());
-            holder.addressView.setText(current.getAdress());
-            holder.tagView.setText(current.getTagNote());
+            holder.addressView.setText("Prise à : " + current.getAdress());
+            holder.tagView.setText("Tag associé : " + current.getTagNote());
 
         } else {
             // Covers the case of data not being ready yet.
@@ -87,13 +88,20 @@ public class NoteListAdapter extends RecyclerView.Adapter<NoteListAdapter.NoteVi
             public void onClick(View v) {
                 System.out.println("Details for note " + holder.noteTitreView.getText());
                 final Note n = mNotes.get(position);
-                System.out.println(n.getIdNote());
+                if (mTwoPane) {
+                    System.out.println("two");
+                    NoteFragmentDetail frag = NoteFragmentDetail.newInstance(n.getTitNote(),n.getContNote(),n.getAdress(),n.getTagNote());
+                    mParentActivity.getSupportFragmentManager().beginTransaction().
+                            replace(R.id.item_detail_container, frag).commit();
+                } else {
+                    System.out.println(n.getIdNote());
                     Intent intent = new Intent(mContext, NoteFragDetailActivity.class);
                     intent.putExtra("note_titre", n.getTitNote());
                     intent.putExtra("note_desc", n.getContNote());
                     intent.putExtra("note_addr", n.getAdress());
                     intent.putExtra("note_tag", n.getTagNote());
                     mContext.startActivity(intent);
+                }
             }
         });
     }

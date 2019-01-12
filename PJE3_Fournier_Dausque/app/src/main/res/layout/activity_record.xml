@@ -10,9 +10,7 @@
         android:id="@+id/linearLayoutRecorder"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_margin="8dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -24,7 +22,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:textColor="@android:color/darker_gray"
-            android:textSize="60sp" />
+            android:textSize="128sp" />
 
         <LinearLayout
             android:id="@+id/linearLayoutPlay"
@@ -37,8 +35,8 @@
 
             <ImageView
                 android:id="@+id/imageViewPlay"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:layout_gravity="center_vertical"
                 android:background="?android:attr/selectableItemBackground"
                 android:clickable="true"
@@ -60,16 +58,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="10dp"
+            android:layout_margin="10dp"
             android:gravity="center_vertical"
             android:orientation="horizontal">
 
-
             <ImageView
                 android:id="@+id/imageViewRecord"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="10dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:background="?android:attr/selectableItemBackground"
                 android:clickable="true"
                 android:focusable="true"
@@ -77,8 +73,8 @@
 
             <ImageView
                 android:id="@+id/imageViewStop"
-                android:layout_width="42dp"
-                android:layout_height="42dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:layout_gravity="center_vertical"
                 android:background="?android:attr/selectableItemBackground"
                 android:clickable="true"

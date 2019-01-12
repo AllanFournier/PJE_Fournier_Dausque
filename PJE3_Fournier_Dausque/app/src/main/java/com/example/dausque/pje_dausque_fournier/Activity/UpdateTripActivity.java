@@ -102,7 +102,7 @@ public class UpdateTripActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         galleryAddPic();
-        setPic();
+        //setPic();
     }
 
 
@@ -159,8 +159,7 @@ public class UpdateTripActivity extends AppCompatActivity {
         mediaScanIntent.setData(contentUri);
         this.sendBroadcast(mediaScanIntent);
     }
-
-
+    /*
     private void setPic() {
         mImageView = findViewById(R.id.bitmapHandler);
         // Get the dimensions of the View
@@ -185,5 +184,6 @@ public class UpdateTripActivity extends AppCompatActivity {
         Bitmap bitmap = BitmapFactory.decodeFile(mCurrentPhotoPath, bmOptions);
         mImageView.setImageBitmap(bitmap);
     }
+    */
 
 }

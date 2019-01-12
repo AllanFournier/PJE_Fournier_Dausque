@@ -8,6 +8,7 @@ import android.arch.lifecycle.ViewModelProviders;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -28,6 +29,8 @@ public class ViewNotesActivity extends AppCompatActivity {
     private NoteViewModel mNoteViewModel;
     int idTrip;
     int triSel = 0;
+    private boolean mTwoPane;
+
     private LiveData<List<Note>> mAllNotes;
 
     @Override
@@ -35,12 +38,31 @@ public class ViewNotesActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_notes);
 
+        if (findViewById(R.id.item_detail_container) != null) {
+            // The detail container view will be present only in the
+            // large-screen layouts (res/values-w900dp).
+            // If this view is present, then the
+            // activity should be in two-pane mode.
+            mTwoPane = true;
+            System.out.println(mTwoPane);
+        }
+        if(!mTwoPane) {
+            FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+            fab.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(ViewNotesActivity.this, CreateTextNoteActivity.class);
+                    startActivity(intent);
+                }
+            });
+        }
+
         idTrip = getIntent().getIntExtra("idTrip", 0);
         triSel = getIntent().getIntExtra("TriType",0);
         RecyclerView recyclerView = findViewById(R.id.recyclerview);
         assert recyclerView != null;
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        final NoteListAdapter adapter = new NoteListAdapter(this, this, false);
+        final NoteListAdapter adapter = new NoteListAdapter(this, this, mTwoPane);
         recyclerView.setAdapter(adapter);
         mNoteViewModel = new NoteViewModel(getApplication(), idTrip,triSel);
 

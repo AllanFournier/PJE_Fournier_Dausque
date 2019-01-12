@@ -39,12 +39,15 @@ public class CreateTextNoteActivity extends AppCompatActivity{
 
     private EditText mEditNoteTitle;
     private EditText mEditNoteCont;
+    private EditText mEditNoteTag;
     private NoteViewModel mNoteViewModel;
     private int idTrip;
     double lat, lng;
 
     private static final int MY_PERMISSIONS_REQUEST_ACCESS_COARSE_LOCATION = 1;
     private FusedLocationProviderClient mFusedLocationClient;
+    String titre = "no title";
+    String cont = "no description";
     String address = "no adress";
     private String tag = "nothing";
 
@@ -54,28 +57,7 @@ public class CreateTextNoteActivity extends AppCompatActivity{
         setContentView(R.layout.activity_create_text_note);
         mEditNoteTitle = findViewById(R.id.edit_titre_note);
         mEditNoteCont = findViewById(R.id.edit_cont_note);
-        Spinner dropdown = findViewById(R.id.spinner1);
-        //create a list of items for the spinner.
-        String[] items = new String[]{"daily", "report", "note"};
-        //create an adapter to describe how the items are displayed, adapters are used in several places in android.
-         //There are multiple variations of this, but this is the basic variant.
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, items);
-        //set the spinners adapter to the previously created one.
-        dropdown.setAdapter(adapter);
-
-        dropdown.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view,
-                                       int position, long id) {
-                Log.v("item", (String) parent.getItemAtPosition(position));
-                tag = (String) parent.getItemAtPosition(position);
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-                // TODO Auto-generated method stub
-            }
-        });
+        mEditNoteTag = findViewById(R.id.edit_tag_note);
 
         requestPermission();
         // location
@@ -124,13 +106,14 @@ public class CreateTextNoteActivity extends AppCompatActivity{
                             R.string.empty_not_saved,
                             Toast.LENGTH_LONG).show();
                 } else {
-                    String titrestr = mEditNoteTitle.getText().toString();
-                    String contstr = mEditNoteCont.getText().toString();
+                    titre = mEditNoteTitle.getText().toString();
+                    cont = mEditNoteCont.getText().toString();
+                    tag = mEditNoteTag.getText().toString();
                     Toast.makeText(
                             getApplicationContext(),
-                            titrestr,
+                            titre,
                             Toast.LENGTH_LONG).show();
-                    Note note = new Note(titrestr, tag, contstr, address, lat, lng, idTrip);
+                    Note note = new Note(titre, tag, cont, address, lat, lng, idTrip);
                     mNoteViewModel.insert(note);
 
                 }

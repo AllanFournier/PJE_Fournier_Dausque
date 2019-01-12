@@ -10,20 +10,20 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
+        android:layout_margin="8dp"
         android:weightSum="100">
 
         <EditText
             android:id="@+id/edit_titre_note"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_marginTop="8dp"
             android:layout_weight="10"
             android:background="@android:color/transparent"
             android:hint="@string/note_title"
             android:inputType="textAutoComplete"
             android:maxLength="20"
             android:maxLines="1"
-            android:textSize="24sp" />
+            android:textSize="28sp" />
 
         <View
             android:id="@+id/view"
@@ -35,54 +35,70 @@
             android:id="@+id/edit_cont_note"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="65"
+            android:layout_weight="60"
             android:background="@android:color/transparent"
             android:ems="10"
             android:gravity="top"
             android:hint="@string/description_text"
             android:inputType="textMultiLine"
             android:lines="5"
-            android:textSize="20sp" />
+            android:textSize="24sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray" />
+
+        <EditText
+            android:id="@+id/edit_tag_note"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="10"
+            android:background="@android:color/transparent"
+            android:hint="Enter a tag"
+            android:inputType="textAutoComplete"
+            android:maxLength="20"
+            android:maxLines="1"
+            android:textSize="24sp" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray" />
 
         <TextView
             android:id="@+id/textview_location"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="5"
-            android:text="TextView"
-            android:textSize="20sp"
-            tools:text="I'm batman" />
+            android:layout_height="0dp"
+            android:layout_weight="10"
+            android:textSize="24sp"
+            android:hint="Your location" />
 
-        <Spinner
-            android:id="@+id/spinner1"
-            android:layout_width="200dp"
-            android:layout_gravity="center"
-            android:layout_height="wrap_content"
-            android:background="@android:drawable/btn_dropdown"
-            android:spinnerMode="dropdown"
-            android:layout_weight="5"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="10"
+            android:gravity="center"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/btn_getloc"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:background="@color/colorPrimary"
+                android:text="Get Location"
+                android:textColor="@color/buttonLabel" />
 
-        <Button
-            android:id="@+id/btn_getloc"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="5"
-            android:layout_margin="8dp"
-            android:layout_gravity="center"
-            android:textColor="@color/buttonLabel"
-            android:background="@color/colorPrimary"
-            android:text="Get Location" />
+            <Button
+                android:id="@+id/btn_save"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:background="@color/colorPrimary"
+                android:text="@string/save_text"
+                android:textColor="@color/buttonLabel" />
 
-        <Button
-            android:id="@+id/btn_save"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_margin="8dp"
-            android:layout_weight="5"
-            android:background="@color/colorPrimary"
-            android:text="@string/save_text"
-            android:textColor="@color/buttonLabel" />
+        </LinearLayout>
+
 
     </LinearLayout>
 

@@ -33,7 +33,7 @@ public abstract class TripRoomDatabase extends RoomDatabase {
         @Override
         public Void doInBackground(final Void... params) {
             mDao.deleteAll();
-            Trip trip = new Trip("Switzerland","The most beautiful country in the world by far");
+            Trip trip = new Trip("Switzerland","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer libero erat, cursus at vehicula in, malesuada convallis lectus. Nulla pellentesque, magna eu mollis dapibus, enim erat maximus mauris, vitae commodo augue mauris vitae ipsum.");
             mDao.insert(trip);
             trip = new Trip("Japan","The land of the weeb");
             mDao.insert(trip);

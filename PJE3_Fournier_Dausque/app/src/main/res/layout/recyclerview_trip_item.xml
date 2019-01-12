@@ -13,7 +13,7 @@
         <ImageView
             android:id="@+id/icon"
             android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_height="125dp"
             android:contentDescription="Image du voyage"
             android:scaleType="centerCrop"
             android:src="@drawable/switzerland" />
@@ -40,7 +40,7 @@
                 android:layout_height="0dp"
                 android:layout_weight="60"
                 android:ellipsize="end"
-                android:maxLines="3"
+                android:maxLines="2"
                 android:text="Description"
                 android:textSize="18sp" />
 

@@ -4,6 +4,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.helper.ItemTouchHelper;
@@ -80,8 +81,10 @@ public class ViewImagesActivity extends AppCompatActivity {
 
         /** setting up recyclerView **/
         recyclerViewImagings = (RecyclerView) findViewById(R.id.recyclerViewImagings);
-        recyclerViewImagings.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL, false));
         recyclerViewImagings.setHasFixedSize(true);
+        RecyclerView.LayoutManager layoutManager = new GridLayoutManager(getApplicationContext(),2);
+        recyclerViewImagings.setLayoutManager(layoutManager);
+
 
         textViewNoImagings = (TextView) findViewById(R.id.textViewNoRecordings);
     }

@@ -22,10 +22,10 @@
             android:id="@+id/image_description"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_marginLeft="8dp"
+            android:paddingTop="8dp"
             android:layout_weight="10"
+            android:layout_marginLeft="8dp"
             android:text="Canada"
-            android:textColor="#000"
             android:textSize="36sp" />
 
         <TextView
@@ -35,7 +35,6 @@
             android:layout_marginLeft="8dp"
             android:layout_weight="30"
             android:text="@string/desc_lorem_detail"
-            android:textColor="#000"
             android:textSize="18sp" />
 
     </LinearLayout>
