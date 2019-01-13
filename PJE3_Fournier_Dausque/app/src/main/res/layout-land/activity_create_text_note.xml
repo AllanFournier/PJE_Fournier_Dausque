@@ -9,8 +9,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="8dp"
         android:orientation="vertical"
+        android:layout_margin="8dp"
         android:weightSum="100">
 
         <EditText
@@ -39,7 +39,7 @@
             android:gravity="top"
             android:hint="@string/description_text"
             android:inputType="textMultiLine"
-            android:lines="14"
+            android:lines="5"
             android:textSize="24sp" />
 
         <View
@@ -57,7 +57,6 @@
             android:maxLength="20"
             android:maxLines="1"
             android:textSize="24sp" />
-
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
@@ -67,31 +66,30 @@
             android:id="@+id/textview_location"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Your location"
-
-            android:textSize="24sp" />
+            android:textSize="24sp"
+            android:hint="Your location" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
             android:gravity="center"
             android:orientation="horizontal">
-
             <Button
                 android:id="@+id/btn_getloc"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="8dp"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
                 android:background="@color/colorPrimary"
-                android:text="Location"
+                android:layout_marginRight="4dp"
+                android:text="Get Location"
+                android:textSize="16dp"
                 android:textColor="@color/buttonLabel" />
 
             <Button
                 android:id="@+id/btn_save"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="8dp"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="4dp"
+                android:textSize="16dp"
                 android:background="@color/colorPrimary"
                 android:text="@string/save_text"
                 android:textColor="@color/buttonLabel" />

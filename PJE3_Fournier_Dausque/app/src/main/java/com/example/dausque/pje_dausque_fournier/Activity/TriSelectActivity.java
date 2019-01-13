@@ -41,4 +41,12 @@ public class TriSelectActivity extends AppCompatActivity {
         startActivity(viewNotesIntent);
     }
 
+    public void viewTripAdr(View view) {
+        triTrip = 3;
+        Intent viewNotesIntent = new Intent(this, ViewNotesActivity.class);
+        viewNotesIntent.putExtra("idTrip", idTrip);
+        viewNotesIntent.putExtra("TriType",triTrip);
+        startActivity(viewNotesIntent);
+    }
+
 }

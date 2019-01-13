@@ -40,20 +40,21 @@ public class ImagingAdapter extends RecyclerView.Adapter<ImagingAdapter.ViewHold
     @Override
     public void onBindViewHolder(ImagingAdapter.ViewHolder holder, int position) {
         if (ImagingArrayList != null) {
-            Imaging current = ImagingArrayList.get(position);
+            final Imaging current = ImagingArrayList.get(position);
             Uri uri = Uri.parse(current.getUri());
             System.out.println(uri.getPath());
             holder.imageViewPlay.setImageBitmap(BitmapFactory.decodeFile(uri.getPath()));
             holder.imageViewPlay.setScaleType(ImageView.ScaleType.CENTER_CROP);
-            holder.titreViewPlay.setText(current.getFileName());
+
+            holder.itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Toast.makeText(context,current.getFileName(),Toast.LENGTH_SHORT).show();
+                }
+            });
         }
 
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(context,"Image",Toast.LENGTH_SHORT).show();
-            }
-        });
+
     }
 
     @Override
@@ -64,12 +65,10 @@ public class ImagingAdapter extends RecyclerView.Adapter<ImagingAdapter.ViewHold
     public class ViewHolder extends RecyclerView.ViewHolder {
 
         ImageView imageViewPlay;
-        TextView titreViewPlay;
 
         public ViewHolder(View itemView) {
             super(itemView);
             imageViewPlay = itemView.findViewById(R.id.img);
-            titreViewPlay = itemView.findViewById(R.id.titleImage);
         }
     }
 }

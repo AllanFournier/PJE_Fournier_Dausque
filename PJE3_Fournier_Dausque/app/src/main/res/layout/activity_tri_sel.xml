@@ -31,6 +31,16 @@
             android:background="@color/colorPrimary"
             android:onClick="viewTripTAG"/>
 
+        <Button
+            android:id="@+id/button14"
+            android:layout_width="200dp"
+            android:layout_margin="8dp"
+            android:layout_height="wrap_content"
+            android:text="Tri par lieu"
+            android:textColor="@color/buttonLabel"
+            android:background="@color/colorPrimary"
+            android:onClick="viewTripAdr"/>
+
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

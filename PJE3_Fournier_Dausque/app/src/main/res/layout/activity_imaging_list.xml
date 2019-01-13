@@ -7,24 +7,29 @@
     android:background="#f2f2f2"
     tools:context="com.example.dausque.pje_dausque_fournier.Activity.ViewImagesActivity">
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/recyclerViewImagings"
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="horizontal"
-        tools:listitem="@layout/recyclerview_image_item">
+        android:orientation="vertical">
 
-    </android.support.v7.widget.RecyclerView>
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerViewImagings"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            tools:listitem="@layout/recyclerview_image_item">
+
+        </android.support.v7.widget.RecyclerView>
+    </FrameLayout>
 
     <TextView
         android:id="@+id/textViewNoImagings"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="No images found"
-        android:visibility="gone"
-        android:textSize="36sp"
         android:layout_centerInParent="true"
+        android:text="No images found"
         android:textColor="@android:color/darker_gray"
-        />
+        android:textSize="36sp"
+        android:visibility="gone" />
 
 </android.support.constraint.ConstraintLayout>

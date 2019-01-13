@@ -34,6 +34,9 @@ public class NoteRepository {
         if(tri == 2){
             mAllTripNotes = mNoteDao.findNotesForTripTag(id);
         }
+       if(tri == 3){
+           mAllTripNotes = mNoteDao.findNotesForTripAdr(id);
+       }
     }
 
 

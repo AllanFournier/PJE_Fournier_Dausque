@@ -35,7 +35,7 @@ import java.util.Locale;
 
 import static android.Manifest.permission.ACCESS_FINE_LOCATION;
 
-public class CreateTextNoteActivity extends AppCompatActivity{
+public class CreateTextNoteActivity extends AppCompatActivity {
 
     private EditText mEditNoteTitle;
     private EditText mEditNoteCont;
@@ -46,9 +46,9 @@ public class CreateTextNoteActivity extends AppCompatActivity{
 
     private static final int MY_PERMISSIONS_REQUEST_ACCESS_COARSE_LOCATION = 1;
     private FusedLocationProviderClient mFusedLocationClient;
-    String titre = "no title";
-    String cont = "no description";
-    String address = "no adress";
+    private String titre = "no title";
+    private String cont = "no description";
+    private String address = "no adress";
     private String tag = "nothing";
 
     @Override
@@ -115,15 +115,11 @@ public class CreateTextNoteActivity extends AppCompatActivity{
                             Toast.LENGTH_LONG).show();
                     Note note = new Note(titre, tag, cont, address, lat, lng, idTrip);
                     mNoteViewModel.insert(note);
-
                 }
                 finish();
             }
         });
     }
-
-
-
 
 
     private void requestPermission() {

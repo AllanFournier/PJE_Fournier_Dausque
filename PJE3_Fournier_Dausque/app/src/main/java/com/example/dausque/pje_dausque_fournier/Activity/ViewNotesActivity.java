@@ -38,6 +38,9 @@ public class ViewNotesActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_notes);
 
+        idTrip = getIntent().getIntExtra("idTrip", 0);
+        triSel = getIntent().getIntExtra("TriType",0);
+
         if (findViewById(R.id.item_detail_container) != null) {
             // The detail container view will be present only in the
             // large-screen layouts (res/values-w900dp).
@@ -52,13 +55,12 @@ public class ViewNotesActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View view) {
                     Intent intent = new Intent(ViewNotesActivity.this, CreateTextNoteActivity.class);
+                    intent.putExtra("idTrip",idTrip);
                     startActivity(intent);
                 }
             });
         }
 
-        idTrip = getIntent().getIntExtra("idTrip", 0);
-        triSel = getIntent().getIntExtra("TriType",0);
         RecyclerView recyclerView = findViewById(R.id.recyclerview);
         assert recyclerView != null;
         recyclerView.setLayoutManager(new LinearLayoutManager(this));

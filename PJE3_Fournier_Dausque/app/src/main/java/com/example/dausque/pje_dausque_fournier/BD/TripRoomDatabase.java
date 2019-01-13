@@ -35,7 +35,7 @@ public abstract class TripRoomDatabase extends RoomDatabase {
             mDao.deleteAll();
             Trip trip = new Trip("Switzerland","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer libero erat, cursus at vehicula in, malesuada convallis lectus. Nulla pellentesque, magna eu mollis dapibus, enim erat maximus mauris, vitae commodo augue mauris vitae ipsum.");
             mDao.insert(trip);
-            trip = new Trip("Japan","The land of the weeb");
+            trip = new Trip("Japan","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer libero erat, cursus at vehicula in, malesuada convallis lectus. Nulla pellentesque, magna eu mollis dapibus, enim erat maximus mauris, vitae commodo augue mauris vitae ipsum.\"");
             mDao.insert(trip);
             return null;
         }

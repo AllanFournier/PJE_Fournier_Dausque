@@ -97,6 +97,7 @@
         android:background="@color/colorPrimary"
         android:onClick="gotoRecodingListActivity"
         android:text="Voir les enregistrements"
+        android:textSize="16sp"
         android:textColor="@color/buttonLabel"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

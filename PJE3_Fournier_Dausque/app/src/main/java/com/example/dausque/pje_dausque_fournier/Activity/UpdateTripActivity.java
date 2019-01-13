@@ -96,6 +96,12 @@ public class UpdateTripActivity extends AppCompatActivity {
         startActivity(viewNotesIntent);
     }
 
+    public void editTrip(View view) {
+        Intent editTripIntent = new Intent(this, EditTripActivity.class);
+        editTripIntent.putExtra("idTrip", idTrip);
+        startActivity(editTripIntent);
+    }
+
     ImageView mImageView;
     String mCurrentPhotoPath;
 
@@ -108,10 +114,10 @@ public class UpdateTripActivity extends AppCompatActivity {
 
     private File createImageFile() throws IOException {
         // Create an image file name
-        String timeStamp = new java.text.SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
-        String imageFileName = "JPEG_" + timeStamp + "_";
+        String timeStamp = new java.text.SimpleDateFormat("yyMMddHHmmssZ").format(new Date());
+        String imageFileName = timeStamp;
         File root = android.os.Environment.getExternalStorageDirectory();
-        File storageDir = new File(root.getAbsolutePath() + "/VoiceRecorderSimplifiedCoding/Photo/"+Titre+"/");
+        File storageDir = new File(root.getAbsolutePath() + "/MyGoodMedia/Photo/"+Titre+"/");
         if (!storageDir.exists()) {
             storageDir.mkdirs();
         }

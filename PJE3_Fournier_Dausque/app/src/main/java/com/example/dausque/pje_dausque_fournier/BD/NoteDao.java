@@ -25,8 +25,12 @@ public interface NoteDao {
     @Query("DELETE FROM Note")
     void deleteAll();
 
+    @Query("SELECT * FROM Note WHERE idTrip=:idTrip ORDER BY adress ASC")
+    LiveData<List<Note>> findNotesForTripAdr(final int idTrip);
+
     @Query("SELECT * FROM Note WHERE idTrip=:idTrip ORDER BY tagNote ASC")
     LiveData<List<Note>> findNotesForTripTag(final int idTrip);
+
     @Query("SELECT * FROM Note WHERE idTrip=:idTrip")
     LiveData<List<Note>> findNotesForTrip(final int idTrip);
 

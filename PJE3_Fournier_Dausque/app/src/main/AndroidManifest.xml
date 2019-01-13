@@ -25,6 +25,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Activity.EditTripActivity"/>
         <activity android:name=".Activity.NoteFragDetailActivity"/>
         <activity android:name=".Activity.TriSelectActivity"/>
         <activity android:name=".Activity.ViewImagesActivity" />

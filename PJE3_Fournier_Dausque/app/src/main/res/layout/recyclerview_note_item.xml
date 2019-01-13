@@ -15,22 +15,26 @@
             android:layout_height="wrap_content"
             android:gravity="center_vertical"
             android:text="Title of the note"
-            android:textSize="28sp" />
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textSize="24sp" />
 
         <TextView
             android:id="@+id/desc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ellipsize="end"
-            android:maxLines="3"
+            android:maxLines="2"
             android:text="Content of note"
-            android:textSize="24sp" />
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/address_note"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Address of note"
+            android:ellipsize="end"
+            android:maxLines="1"
             android:textSize="20sp" />
 
         <TextView

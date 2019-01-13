@@ -34,6 +34,8 @@ TripRepository {
         new deleteTripAsyncTask(mTripDao).execute(trip);
     }
 
+    public void update(Trip trip){new updateAsyncTask(mTripDao).execute(trip);}
+
     public static class deleteTripAsyncTask extends AsyncTask<Trip, Void, Void> {
         private TripDao mAsyncTaskDao;
 
@@ -59,6 +61,21 @@ TripRepository {
         @Override
         protected Void doInBackground(final Trip... params) {
             mAsyncTaskDao.insert(params[0]);
+            return null;
+        }
+    }
+
+    public static class updateAsyncTask extends AsyncTask<Trip, Void, Void> {
+
+        private TripDao mAsyncTaskDao;
+
+        updateAsyncTask(TripDao dao) {
+            mAsyncTaskDao = dao;
+        }
+
+        @Override
+        protected Void doInBackground(final Trip... params) {
+            mAsyncTaskDao.update(params[0]);
             return null;
         }
     }

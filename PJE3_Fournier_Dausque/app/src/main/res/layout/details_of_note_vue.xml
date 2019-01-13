@@ -4,40 +4,48 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:layout_margin="8dp">
+        android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/titre_note_frag"
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Canada"
-            android:textSize="28sp" />
+            android:layout_height="match_parent"
+            android:layout_margin="8dp"
+            android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/desc_note_frag"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/desc_lorem_detail"
-            android:textSize="24sp" />
-        <TextView
-            android:id="@+id/adress_note_frag"
-            android:layout_width="match_parent"
-            android:layout_marginTop="8dp"
-            android:layout_height="wrap_content"
-            android:text="Une adresse"
-            android:textSize="24sp" />
+            <TextView
+                android:id="@+id/titre_note_frag"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Canada"
+                android:textSize="28sp" />
 
-        <TextView
-            android:id="@+id/tag_note_frag"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Un tag "
-            android:textSize="24sp" />
+            <TextView
+                android:id="@+id/desc_note_frag"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/desc_lorem_detail"
+                android:textSize="24sp" />
 
-    </LinearLayout>
+            <TextView
+                android:id="@+id/adress_note_frag"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Une adresse"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/tag_note_frag"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Un tag "
+                android:textSize="24sp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
 
 </android.support.constraint.ConstraintLayout>

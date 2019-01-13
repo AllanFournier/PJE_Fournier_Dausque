@@ -145,12 +145,12 @@ public class RecordActivity extends AppCompatActivity implements View.OnClickLis
         mRecorder.setAudioSource(MediaRecorder.AudioSource.MIC);
         mRecorder.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP);
         File root = android.os.Environment.getExternalStorageDirectory();
-        File file = new File(root.getAbsolutePath() + "/VoiceRecorderSimplifiedCoding/Audios/"+songs_folder);
+        File file = new File(root.getAbsolutePath() + "/MyGoodMedia/Audios/"+songs_folder);
         if (!file.exists()) {
             file.mkdirs();
         }
 
-        fileName =  root.getAbsolutePath() + "/VoiceRecorderSimplifiedCoding/Audios/"+songs_folder+"/" + String.valueOf(System.currentTimeMillis() + ".mp3");
+        fileName =  root.getAbsolutePath() + "/MyGoodMedia/Audios/"+songs_folder+"/" + String.valueOf(System.currentTimeMillis() + ".mp3");
         Log.d("filename",fileName);
         mRecorder.setOutputFile(fileName);
         mRecorder.setAudioEncoder(MediaRecorder.AudioEncoder.AMR_NB);

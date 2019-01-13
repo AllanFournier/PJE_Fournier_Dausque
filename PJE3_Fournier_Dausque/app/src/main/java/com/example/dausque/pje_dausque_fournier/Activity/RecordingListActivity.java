@@ -53,7 +53,7 @@ public class RecordingListActivity extends AppCompatActivity {
     private void fetchRecordings() {
 
         File root = android.os.Environment.getExternalStorageDirectory();
-        String path = root.getAbsolutePath() +  "/VoiceRecorderSimplifiedCoding/Audios/"+songs_folder_list+"/";
+        String path = root.getAbsolutePath() +  "/MyGoodMedia/Audios/"+songs_folder_list+"/";
         Log.d("Files", "Path: " + path);
         File directory = new File(path);
         File[] files = directory.listFiles();
@@ -64,7 +64,7 @@ public class RecordingListActivity extends AppCompatActivity {
 
                     Log.d("Files", "FileName:" + files[i].getName());
                     String fileName = files[i].getName();
-                    String recordingUri = root.getAbsolutePath() + "/VoiceRecorderSimplifiedCoding/Audios/" + songs_folder_list + "/" + fileName;
+                    String recordingUri = root.getAbsolutePath() + "/MyGoodMedia/Audios/" + songs_folder_list + "/" + fileName;
 
                     Recording recording = new Recording(recordingUri, fileName, false);
                     recordingArraylist.add(recording);

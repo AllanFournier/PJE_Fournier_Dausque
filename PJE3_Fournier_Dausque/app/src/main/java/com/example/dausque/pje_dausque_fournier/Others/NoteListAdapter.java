@@ -72,8 +72,8 @@ public class NoteListAdapter extends RecyclerView.Adapter<NoteListAdapter.NoteVi
             Note current = mNotes.get(position);
             holder.noteTitreView.setText(current.getTitNote());
             holder.noteDescView.setText(current.getContNote());
-            holder.addressView.setText("Prise à : " + current.getAdress());
-            holder.tagView.setText("Tag associé : " + current.getTagNote());
+            holder.addressView.setText("Lieu : " + current.getAdress());
+            holder.tagView.setText("Tag : " + current.getTagNote());
 
         } else {
             // Covers the case of data not being ready yet.
